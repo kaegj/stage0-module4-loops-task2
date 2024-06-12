@@ -1,7 +1,5 @@
 package school.mjc.stage0.loops.task2;
 
-import java.sql.SQLOutput;
-
 public class PrimeNumbers {
     public void printPrimeNumbers(int printToInclusive) {
         int i, number = 1, count;
@@ -19,6 +17,7 @@ public class PrimeNumbers {
             if(count == 0 && number != 1) {
                 System.out.println(number);
             }
+            number++;
         }
     }
 }
