@@ -2,17 +2,24 @@ package school.mjc.stage0.loops.task2;
 
 public class FactorialNumbers {
     public void printFactorialRow(int printToInclusive) {
-        if (printToInclusive > 0) {
-            int fact = 1;
-            int i = 1;
-            System.out.println(1);
-            while (i <= printToInclusive) {
-                fact *= i;
-                i++;
-                System.out.println(fact);
+        int counter = 2;
+        while (counter <= printToInclusive) {
+            int divider = 2;
+            boolean isPrime = true;
+
+            while (divider <= Math.sqrt(counter)) {
+                if (counter % divider == 0) {
+                    isPrime = false;
+                }
+
+                divider ++;
             }
-        } else {
-            System.out.println(1);
+
+            if (isPrime) {
+                System.out.println(counter);
+            }
+
+            counter ++;
         }
     }
 }
